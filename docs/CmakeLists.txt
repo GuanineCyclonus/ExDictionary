@@ -1,0 +1,37 @@
+cmake_minimum_required(VERSION 3.15)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED true)
+set(CMAKE_EXPORT_COMPILE_COMMANDS true)
+
+set(USING_RELEASE_MODE true)
+
+project(ExDictionary VERSION 0.1.0)
+
+string(TIMESTAMP COMPILE_TIME %Y%m%d_%H%M%S)
+
+set(SRC_LIST ExDictionary.cpp)
+
+add_subdirectory(FileFunctions)
+add_subdirectory(CommandFunctions)
+add_subdirectory(OptionFunctions)
+add_subdirectory(Trie)
+add_subdirectory(IOFunctions)
+
+add_executable(${PROJECT_NAME} ${SRC_LIST})
+
+target_link_libraries(${PROJECT_NAME} PUBLIC CommandFunctions)
+target_link_libraries(${PROJECT_NAME} PUBLIC OptionFunctions)
+target_link_libraries(${PROJECT_NAME} PUBLIC Trie)
+target_link_libraries(${PROJECT_NAME} PUBLIC IOFunctions)
+target_link_libraries(${PROJECT_NAME} PUBLIC FileFunctions)
+
+target_include_directories(${PROJECT_NAME} PUBLIC
+                           ${PROJECT_BINARY_DIR}
+                           ${PROJECT_SOURCE_DIR}/CommandFunctions
+                           ${PROJECT_SOURCE_DIR}/OptionFunctions
+                           ${PROJECT_SOURCE_DIR}/Trie
+                           ${PROJECT_SOURCE_DIR}/IOFucntions
+                           ${PROJECT_SOURCE_DIR}/FileFunctions
+)
+
+configure_file(ExDictionaryConfig.h.in ExDictionaryConfig.h)
