@@ -11,11 +11,11 @@ string(TIMESTAMP COMPILE_TIME %Y%m%d_%H%M%S)
 
 set(SRC_LIST ExDictionary.cpp)
 
-add_subdirectory(FileFunctions)
-add_subdirectory(CommandFunctions)
-add_subdirectory(OptionFunctions)
-add_subdirectory(Trie)
-add_subdirectory(IOFunctions)
+add_subdirectory(src/FileFunctions)
+add_subdirectory(src/CommandFunctions)
+add_subdirectory(src/OptionFunctions)
+add_subdirectory(src/Trie)
+add_subdirectory(src/IOFunctions)
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
 

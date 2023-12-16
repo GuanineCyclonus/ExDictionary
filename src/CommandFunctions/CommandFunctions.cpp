@@ -7,9 +7,9 @@
 #include <string_view>
 #include <vector>
 #include "CommandFunctions.h"
-#include "OptionFunctions.h"
-#include "Trie.h"
-#include "IOFunctions.h"
+#include "../OptionFunctions/OptionFunctions.h"
+#include "../Trie/Trie.h"
+#include "../IOFunctions/IOFunctions.h"
 
 int commandCode;
 

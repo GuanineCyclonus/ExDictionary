@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "CommandFunctions.h"
+#include "src/CommandFunctions/CommandFunctions.h"
 #include "ExDictionaryConfig.h"
 
 extern int commandCode;

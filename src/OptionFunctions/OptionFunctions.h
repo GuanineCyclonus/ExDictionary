@@ -4,7 +4,7 @@
 #include <string>
 #include <string_view>
 #include <vector>
-#include "Trie.h"
+#include "../Trie/Trie.h"
 
 void AddWord(Trie* trie, const std::vector<std::string>& BUF);
 void DeleteWord(Trie* trie, const std::vector<std::string>& BUF);

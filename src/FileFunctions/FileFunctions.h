@@ -5,7 +5,7 @@
 #include <string>
 #include <string_view>
 
-#include "Trie.h"
+#include "../Trie/Trie.h"
 
 namespace file {
     void DirectoryCheck();

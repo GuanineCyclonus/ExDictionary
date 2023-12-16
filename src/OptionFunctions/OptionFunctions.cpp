@@ -2,8 +2,8 @@
 #include <string>
 #include <vector>
 #include "OptionFunctions.h"
-#include "Trie.h"
-#include "FileFunctions.h"
+#include "../Trie/Trie.h"
+#include "../FileFunctions/FileFunctions.h"
 
 void AddWord(Trie* trie, const std::vector<std::string>& BUF) {
     auto it = BUF.begin() + 1;

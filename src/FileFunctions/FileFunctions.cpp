@@ -4,7 +4,7 @@
 #include <string>
 #include <string_view>
 
-#include "Trie.h"
+#include "../Trie/Trie.h"
 #include "FileFunctions.h"
 
 std::filesystem::path path = std::string(std::filesystem::current_path());
